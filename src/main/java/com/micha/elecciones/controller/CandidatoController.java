@@ -30,7 +30,7 @@ public class CandidatoController extends BaseController{
 
 
         candidato.setLista(listaService.findOne(id).orElseThrow(EntityNotFoundException::new));
-
+        System.out.println("el candidato es /n"+candidato);
         return candidatoService.save(candidato);
     }
 

@@ -2,12 +2,14 @@ package com.micha.elecciones.model.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
+@ToString(exclude = "lista")
 public class Candidato {
 
     @Id
@@ -28,6 +30,7 @@ public class Candidato {
 
     @JsonIgnore
     @ManyToOne
+
     @JoinColumn(name = "id_lista", referencedColumnName = "id_lista")
     private Lista lista;
 

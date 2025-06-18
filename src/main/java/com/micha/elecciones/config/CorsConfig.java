@@ -16,6 +16,8 @@ public class CorsConfig {
                 registry.addMapping("/api/**").allowedOrigins("*").allowedMethods("*");
                 registry.addMapping("/ap/**").allowedOrigins("*").allowedMethods("*");
                 registry.addMapping("/login").allowedOrigins("*").allowedMethods("*");
+                registry.addMapping("/propuesta/**").allowedOrigins("*").allowedMethods("*");
+                registry.addMapping("/public/**").allowedOrigins("*").allowedMethods("*");
             }
         };
     }
